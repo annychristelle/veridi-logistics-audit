@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b7786e5cac222d347c0ea59945502980 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b7786e5cac222d347c0ea59945502980" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b7786e5cac222d347c0ea59945502980 = L.map(
+                "map_b7786e5cac222d347c0ea59945502980",
+                {
+                    center: [-14.2, -51.9],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1d637e521e45f8657a5f3e533478fccf = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1d637e521e45f8657a5f3e533478fccf.addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+            var circle_marker_f64dbaa1f0084a34396aff2f0433d8f4 = L.circleMarker(
+                [-9.57, -36.78],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25.12, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_cebbb1c03cd14188dc8e8adb4564c95a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fc121c193df79aaf42ecd8627bee890f = $(`<div id="html_fc121c193df79aaf42ecd8627bee890f" style="width: 100.0%; height: 100.0%;"><b>AL</b><br>Late Rate: 21.4%<br>Avg Delay: -8.7 days<br>Avg Review: 3.85 ⭐<br>Orders: 397</div>`)[0];
+                popup_cebbb1c03cd14188dc8e8adb4564c95a.setContent(html_fc121c193df79aaf42ecd8627bee890f);
+            
+        
+
+        circle_marker_f64dbaa1f0084a34396aff2f0433d8f4.bindPopup(popup_cebbb1c03cd14188dc8e8adb4564c95a)
+        ;
+
+        
+    
+    
+            circle_marker_f64dbaa1f0084a34396aff2f0433d8f4.bindTooltip(
+                `<div>
+                     AL: 21.4% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f786eed340be2828842a92f4d90b269a = L.circleMarker(
+                [-4.96, -45.27],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.92, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_522b210a64fbfca085992fb2d6b8906f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d16ea30a22d10161e3794cbd58885577 = $(`<div id="html_d16ea30a22d10161e3794cbd58885577" style="width: 100.0%; height: 100.0%;"><b>MA</b><br>Late Rate: 17.4%<br>Avg Delay: -9.6 days<br>Avg Review: 3.83 ⭐<br>Orders: 717</div>`)[0];
+                popup_522b210a64fbfca085992fb2d6b8906f.setContent(html_d16ea30a22d10161e3794cbd58885577);
+            
+        
+
+        circle_marker_f786eed340be2828842a92f4d90b269a.bindPopup(popup_522b210a64fbfca085992fb2d6b8906f)
+        ;
+
+        
+    
+    
+            circle_marker_f786eed340be2828842a92f4d90b269a.bindTooltip(
+                `<div>
+                     MA: 17.4% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_87a746b4707a2f8de2d014e099de417c = L.circleMarker(
+                [-10.57, -37.45],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.16, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_b088015d3ed4ede508e3165163674288 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6c627751e2a114adb09d4f0dffeca161 = $(`<div id="html_6c627751e2a114adb09d4f0dffeca161" style="width: 100.0%; height: 100.0%;"><b>SE</b><br>Late Rate: 15.2%<br>Avg Delay: -10.0 days<br>Avg Review: 3.91 ⭐<br>Orders: 335</div>`)[0];
+                popup_b088015d3ed4ede508e3165163674288.setContent(html_6c627751e2a114adb09d4f0dffeca161);
+            
+        
+
+        circle_marker_87a746b4707a2f8de2d014e099de417c.bindPopup(popup_b088015d3ed4ede508e3165163674288)
+        ;
+
+        
+    
+    
+            circle_marker_87a746b4707a2f8de2d014e099de417c.bindTooltip(
+                `<div>
+                     SE: 15.2% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_267ced0a569f75cce9be2ada075bbb41 = L.circleMarker(
+                [-7.72, -42.73],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.12, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_14bc889e0cf026647cc9eabebc28e60b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_753df61300537fe48f38c5488bc98eb7 = $(`<div id="html_753df61300537fe48f38c5488bc98eb7" style="width: 100.0%; height: 100.0%;"><b>PI</b><br>Late Rate: 13.9%<br>Avg Delay: -11.3 days<br>Avg Review: 3.99 ⭐<br>Orders: 476</div>`)[0];
+                popup_14bc889e0cf026647cc9eabebc28e60b.setContent(html_753df61300537fe48f38c5488bc98eb7);
+            
+        
+
+        circle_marker_267ced0a569f75cce9be2ada075bbb41.bindPopup(popup_14bc889e0cf026647cc9eabebc28e60b)
+        ;
+
+        
+    
+    
+            circle_marker_267ced0a569f75cce9be2ada075bbb41.bindTooltip(
+                `<div>
+                     PI: 13.9% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_99f39b4e39ed8c231de16e51a4cfa5f5 = L.circleMarker(
+                [-5.5, -39.32],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.04, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_02211adb373e36e234eb915134ec7cf3 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3ffe13bce5c8433ac6b6ddbee4fde979 = $(`<div id="html_3ffe13bce5c8433ac6b6ddbee4fde979" style="width: 100.0%; height: 100.0%;"><b>CE</b><br>Late Rate: 13.8%<br>Avg Delay: -10.8 days<br>Avg Review: 3.94 ⭐<br>Orders: 1,279</div>`)[0];
+                popup_02211adb373e36e234eb915134ec7cf3.setContent(html_3ffe13bce5c8433ac6b6ddbee4fde979);
+            
+        
+
+        circle_marker_99f39b4e39ed8c231de16e51a4cfa5f5.bindPopup(popup_02211adb373e36e234eb915134ec7cf3)
+        ;
+
+        
+    
+    
+            circle_marker_99f39b4e39ed8c231de16e51a4cfa5f5.bindTooltip(
+                `<div>
+                     CE: 13.8% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_09dbc7c94344498230ebbaaf1c35f4e7 = L.circleMarker(
+                [-12.96, -41.71],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.759999999999998, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_d4bc52543a6724d5b0ed40223ea3d71b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0341addda57f70f87c2123c39cbd4b84 = $(`<div id="html_0341addda57f70f87c2123c39cbd4b84" style="width: 100.0%; height: 100.0%;"><b>BA</b><br>Late Rate: 12.2%<br>Avg Delay: -10.8 days<br>Avg Review: 3.93 ⭐<br>Orders: 3,256</div>`)[0];
+                popup_d4bc52543a6724d5b0ed40223ea3d71b.setContent(html_0341addda57f70f87c2123c39cbd4b84);
+            
+        
+
+        circle_marker_09dbc7c94344498230ebbaaf1c35f4e7.bindPopup(popup_d4bc52543a6724d5b0ed40223ea3d71b)
+        ;
+
+        
+    
+    
+            circle_marker_09dbc7c94344498230ebbaaf1c35f4e7.bindTooltip(
+                `<div>
+                     BA: 12.2% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b9bbf34cec0c492e1592538e0a589606 = L.circleMarker(
+                [1.99, -61.33],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.759999999999998, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_7fe7ad00b6ffd67e3b1e2c89c48993db = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1d28bff5a96b2a9773243929b342c5ea = $(`<div id="html_1d28bff5a96b2a9773243929b342c5ea" style="width: 100.0%; height: 100.0%;"><b>RR</b><br>Late Rate: 12.2%<br>Avg Delay: -17.3 days<br>Avg Review: 3.90 ⭐<br>Orders: 41</div>`)[0];
+                popup_7fe7ad00b6ffd67e3b1e2c89c48993db.setContent(html_1d28bff5a96b2a9773243929b342c5ea);
+            
+        
+
+        circle_marker_b9bbf34cec0c492e1592538e0a589606.bindPopup(popup_7fe7ad00b6ffd67e3b1e2c89c48993db)
+        ;
+
+        
+    
+    
+            circle_marker_b9bbf34cec0c492e1592538e0a589606.bindTooltip(
+                `<div>
+                     RR: 12.2% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c2e2653eb09605a269f2e7e27573937c = L.circleMarker(
+                [-22.25, -42.66],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.68, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_8c808ec1964fd40db5ff1bf6d0c79760 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fdb49f24ae9ae53aa01766ee8065e3a6 = $(`<div id="html_fdb49f24ae9ae53aa01766ee8065e3a6" style="width: 100.0%; height: 100.0%;"><b>RJ</b><br>Late Rate: 12.1%<br>Avg Delay: -11.8 days<br>Avg Review: 3.97 ⭐<br>Orders: 12,350</div>`)[0];
+                popup_8c808ec1964fd40db5ff1bf6d0c79760.setContent(html_fdb49f24ae9ae53aa01766ee8065e3a6);
+            
+        
+
+        circle_marker_c2e2653eb09605a269f2e7e27573937c.bindPopup(popup_8c808ec1964fd40db5ff1bf6d0c79760)
+        ;
+
+        
+    
+    
+            circle_marker_c2e2653eb09605a269f2e7e27573937c.bindTooltip(
+                `<div>
+                     RJ: 12.1% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b2e3ea8a516f35f205ecae83f47a35e2 = L.circleMarker(
+                [-3.41, -52.29],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.96, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_94727b2970d33049289149ee6d630637 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_980f57a692ab08cb49adafd807a32c53 = $(`<div id="html_980f57a692ab08cb49adafd807a32c53" style="width: 100.0%; height: 100.0%;"><b>PA</b><br>Late Rate: 11.2%<br>Avg Delay: -14.1 days<br>Avg Review: 3.91 ⭐<br>Orders: 946</div>`)[0];
+                popup_94727b2970d33049289149ee6d630637.setContent(html_980f57a692ab08cb49adafd807a32c53);
+            
+        
+
+        circle_marker_b2e3ea8a516f35f205ecae83f47a35e2.bindPopup(popup_94727b2970d33049289149ee6d630637)
+        ;
+
+        
+    
+    
+            circle_marker_b2e3ea8a516f35f205ecae83f47a35e2.bindTooltip(
+                `<div>
+                     PA: 11.2% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b17346e31fd1a39a0e51bf8c7dd94719 = L.circleMarker(
+                [-19.19, -40.34],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.560000000000002, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_fec8ce68d0490e21a6bbaf8866f9b2fb = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d7f4d3855df9c53990bad902f9c6e18d = $(`<div id="html_d7f4d3855df9c53990bad902f9c6e18d" style="width: 100.0%; height: 100.0%;"><b>ES</b><br>Late Rate: 10.7%<br>Avg Delay: -10.5 days<br>Avg Review: 4.08 ⭐<br>Orders: 1,995</div>`)[0];
+                popup_fec8ce68d0490e21a6bbaf8866f9b2fb.setContent(html_d7f4d3855df9c53990bad902f9c6e18d);
+            
+        
+
+        circle_marker_b17346e31fd1a39a0e51bf8c7dd94719.bindPopup(popup_fec8ce68d0490e21a6bbaf8866f9b2fb)
+        ;
+
+        
+    
+    
+            circle_marker_b17346e31fd1a39a0e51bf8c7dd94719.bindTooltip(
+                `<div>
+                     ES: 10.7% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_87be36fd4647ff9b603edcfa584643fa = L.circleMarker(
+                [-7.24, -36.8],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.32, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_bba6d95b79e13032d63029ca23eba3dd = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e36a8169fabd85ce56453605cac50452 = $(`<div id="html_e36a8169fabd85ce56453605cac50452" style="width: 100.0%; height: 100.0%;"><b>PB</b><br>Late Rate: 10.4%<br>Avg Delay: -13.3 days<br>Avg Review: 4.08 ⭐<br>Orders: 517</div>`)[0];
+                popup_bba6d95b79e13032d63029ca23eba3dd.setContent(html_e36a8169fabd85ce56453605cac50452);
+            
+        
+
+        circle_marker_87be36fd4647ff9b603edcfa584643fa.bindPopup(popup_bba6d95b79e13032d63029ca23eba3dd)
+        ;
+
+        
+    
+    
+            circle_marker_87be36fd4647ff9b603edcfa584643fa.bindTooltip(
+                `<div>
+                     PB: 10.4% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a42292d3a88b1155d72d17876b837110 = L.circleMarker(
+                [-10.25, -48.25],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.920000000000002, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_366c05316d82983d0bdce7983c925f3c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b705dd313c6e90a9f409489b73d107b7 = $(`<div id="html_b705dd313c6e90a9f409489b73d107b7" style="width: 100.0%; height: 100.0%;"><b>TO</b><br>Late Rate: 9.9%<br>Avg Delay: -12.1 days<br>Avg Review: 4.15 ⭐<br>Orders: 274</div>`)[0];
+                popup_366c05316d82983d0bdce7983c925f3c.setContent(html_b705dd313c6e90a9f409489b73d107b7);
+            
+        
+
+        circle_marker_a42292d3a88b1155d72d17876b837110.bindPopup(popup_366c05316d82983d0bdce7983c925f3c)
+        ;
+
+        
+    
+    
+            circle_marker_a42292d3a88b1155d72d17876b837110.bindTooltip(
+                `<div>
+                     TO: 9.9% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_169ab736ca216be49a247bcee87854f2 = L.circleMarker(
+                [-20.77, -54.79],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.76, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_b90ba64faa972c2462d30c929fbb655d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_dbead5c0b0296f53744152beaaed76bd = $(`<div id="html_dbead5c0b0296f53744152beaaed76bd" style="width: 100.0%; height: 100.0%;"><b>MS</b><br>Late Rate: 9.7%<br>Avg Delay: -11.1 days<br>Avg Review: 4.16 ⭐<br>Orders: 701</div>`)[0];
+                popup_b90ba64faa972c2462d30c929fbb655d.setContent(html_dbead5c0b0296f53744152beaaed76bd);
+            
+        
+
+        circle_marker_169ab736ca216be49a247bcee87854f2.bindPopup(popup_b90ba64faa972c2462d30c929fbb655d)
+        ;
+
+        
+    
+    
+            circle_marker_169ab736ca216be49a247bcee87854f2.bindTooltip(
+                `<div>
+                     MS: 9.7% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c28d725c6a5b45ed9349a645bf3861b1 = L.circleMarker(
+                [-8.38, -37.86],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.68, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_6f28c11a8eb4a7686d6a5df092bf2b6e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_90ae17d0768f46685615d178c19d716a = $(`<div id="html_90ae17d0768f46685615d178c19d716a" style="width: 100.0%; height: 100.0%;"><b>PE</b><br>Late Rate: 9.6%<br>Avg Delay: -13.3 days<br>Avg Review: 4.08 ⭐<br>Orders: 1,593</div>`)[0];
+                popup_6f28c11a8eb4a7686d6a5df092bf2b6e.setContent(html_90ae17d0768f46685615d178c19d716a);
+            
+        
+
+        circle_marker_c28d725c6a5b45ed9349a645bf3861b1.bindPopup(popup_6f28c11a8eb4a7686d6a5df092bf2b6e)
+        ;
+
+        
+    
+    
+            circle_marker_c28d725c6a5b45ed9349a645bf3861b1.bindTooltip(
+                `<div>
+                     PE: 9.6% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1ed0399cf9091af35360f2eb8ce13e89 = L.circleMarker(
+                [-5.81, -36.59],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.440000000000001, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_c48b2d72d0bad1274dd0c364974cd7dc = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2ba11770841e451caece444ea6cd19e8 = $(`<div id="html_2ba11770841e451caece444ea6cd19e8" style="width: 100.0%; height: 100.0%;"><b>RN</b><br>Late Rate: 9.3%<br>Avg Delay: -13.6 days<br>Avg Review: 4.15 ⭐<br>Orders: 474</div>`)[0];
+                popup_c48b2d72d0bad1274dd0c364974cd7dc.setContent(html_2ba11770841e451caece444ea6cd19e8);
+            
+        
+
+        circle_marker_1ed0399cf9091af35360f2eb8ce13e89.bindPopup(popup_c48b2d72d0bad1274dd0c364974cd7dc)
+        ;
+
+        
+    
+    
+            circle_marker_1ed0399cf9091af35360f2eb8ce13e89.bindTooltip(
+                `<div>
+                     RN: 9.3% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4b88280239af31c20d2f0e447b78fa68 = L.circleMarker(
+                [-27.33, -50.21],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.559999999999999, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_72891fb950d0e143a0d7a2880b15ea1e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a03efa4305faedd65dc12aa97e45f0e6 = $(`<div id="html_a03efa4305faedd65dc12aa97e45f0e6" style="width: 100.0%; height: 100.0%;"><b>SC</b><br>Late Rate: 8.2%<br>Avg Delay: -11.5 days<br>Avg Review: 4.13 ⭐<br>Orders: 3,546</div>`)[0];
+                popup_72891fb950d0e143a0d7a2880b15ea1e.setContent(html_a03efa4305faedd65dc12aa97e45f0e6);
+            
+        
+
+        circle_marker_4b88280239af31c20d2f0e447b78fa68.bindPopup(popup_72891fb950d0e143a0d7a2880b15ea1e)
+        ;
+
+        
+    
+    
+            circle_marker_4b88280239af31c20d2f0e447b78fa68.bindTooltip(
+                `<div>
+                     SC: 8.2% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b1119f4a05611aedfaaaaf9b1a0ba241 = L.circleMarker(
+                [-15.83, -49.63],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.2, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_d94cccf553203b9a2d6ff14e1739dc91 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0fa68e7bffc2511498cad349f2b33aa2 = $(`<div id="html_0fa68e7bffc2511498cad349f2b33aa2" style="width: 100.0%; height: 100.0%;"><b>GO</b><br>Late Rate: 6.5%<br>Avg Delay: -12.2 days<br>Avg Review: 4.11 ⭐<br>Orders: 1,957</div>`)[0];
+                popup_d94cccf553203b9a2d6ff14e1739dc91.setContent(html_0fa68e7bffc2511498cad349f2b33aa2);
+            
+        
+
+        circle_marker_b1119f4a05611aedfaaaaf9b1a0ba241.bindPopup(popup_d94cccf553203b9a2d6ff14e1739dc91)
+        ;
+
+        
+    
+    
+            circle_marker_b1119f4a05611aedfaaaaf9b1a0ba241.bindTooltip(
+                `<div>
+                     GO: 6.5% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_30033aa843f1b69bc9822166aaab80e9 = L.circleMarker(
+                [-30.03, -51.22],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.879999999999999, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_78ce0793986b638876e6b66804d34f5d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2ba41db5463cbcab286384e3e5e19de8 = $(`<div id="html_2ba41db5463cbcab286384e3e5e19de8" style="width: 100.0%; height: 100.0%;"><b>RS</b><br>Late Rate: 6.1%<br>Avg Delay: -13.9 days<br>Avg Review: 4.18 ⭐<br>Orders: 5,344</div>`)[0];
+                popup_78ce0793986b638876e6b66804d34f5d.setContent(html_2ba41db5463cbcab286384e3e5e19de8);
+            
+        
+
+        circle_marker_30033aa843f1b69bc9822166aaab80e9.bindPopup(popup_78ce0793986b638876e6b66804d34f5d)
+        ;
+
+        
+    
+    
+            circle_marker_30033aa843f1b69bc9822166aaab80e9.bindTooltip(
+                `<div>
+                     RS: 6.1% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_52ad2eb8ee06639f299195cabf98d00e = L.circleMarker(
+                [-12.68, -56.92],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.8, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_d1886bd20ceeaf9661de812b3602bfc6 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3167f5bcf63f62eced88347478ed6f49 = $(`<div id="html_3167f5bcf63f62eced88347478ed6f49" style="width: 100.0%; height: 100.0%;"><b>MT</b><br>Late Rate: 6.0%<br>Avg Delay: -14.4 days<br>Avg Review: 4.15 ⭐<br>Orders: 886</div>`)[0];
+                popup_d1886bd20ceeaf9661de812b3602bfc6.setContent(html_3167f5bcf63f62eced88347478ed6f49);
+            
+        
+
+        circle_marker_52ad2eb8ee06639f299195cabf98d00e.bindPopup(popup_d1886bd20ceeaf9661de812b3602bfc6)
+        ;
+
+        
+    
+    
+            circle_marker_52ad2eb8ee06639f299195cabf98d00e.bindTooltip(
+                `<div>
+                     MT: 6.0% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_97b718e817ea46125476bcaab0fabb09 = L.circleMarker(
+                [-15.78, -47.93],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.56, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_9356f7ba8f6e2850fb43e533909cb786 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0fb218a20055cf85ab44a2e305b0f9f0 = $(`<div id="html_0fb218a20055cf85ab44a2e305b0f9f0" style="width: 100.0%; height: 100.0%;"><b>DF</b><br>Late Rate: 5.7%<br>Avg Delay: -12.0 days<br>Avg Review: 4.13 ⭐<br>Orders: 2,080</div>`)[0];
+                popup_9356f7ba8f6e2850fb43e533909cb786.setContent(html_0fb218a20055cf85ab44a2e305b0f9f0);
+            
+        
+
+        circle_marker_97b718e817ea46125476bcaab0fabb09.bindPopup(popup_9356f7ba8f6e2850fb43e533909cb786)
+        ;
+
+        
+    
+    
+            circle_marker_97b718e817ea46125476bcaab0fabb09.bindTooltip(
+                `<div>
+                     DF: 5.7% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4016f093553f0974551da4fee86f648d = L.circleMarker(
+                [-18.51, -44.56],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.68, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_bf0d6f0af8b2e9f3266231bc6a71cc4b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9f17fae6145a2135228a85cfa4658803 = $(`<div id="html_9f17fae6145a2135228a85cfa4658803" style="width: 100.0%; height: 100.0%;"><b>MG</b><br>Late Rate: 4.6%<br>Avg Delay: -13.2 days<br>Avg Review: 4.19 ⭐<br>Orders: 11,354</div>`)[0];
+                popup_bf0d6f0af8b2e9f3266231bc6a71cc4b.setContent(html_9f17fae6145a2135228a85cfa4658803);
+            
+        
+
+        circle_marker_4016f093553f0974551da4fee86f648d.bindPopup(popup_bf0d6f0af8b2e9f3266231bc6a71cc4b)
+        ;
+
+        
+    
+    
+            circle_marker_4016f093553f0974551da4fee86f648d.bindTooltip(
+                `<div>
+                     MG: 4.6% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1b6f6770bc3fcf69b0160d3058756bf9 = L.circleMarker(
+                [-22.95, -48.71],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.6, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_760d1cfb9d575c03a99e4a838d6d35f5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1bb45ab8498cf7dbd5fb60a02aaae9c6 = $(`<div id="html_1bb45ab8498cf7dbd5fb60a02aaae9c6" style="width: 100.0%; height: 100.0%;"><b>SP</b><br>Late Rate: 4.5%<br>Avg Delay: -11.1 days<br>Avg Review: 4.25 ⭐<br>Orders: 40,494</div>`)[0];
+                popup_760d1cfb9d575c03a99e4a838d6d35f5.setContent(html_1bb45ab8498cf7dbd5fb60a02aaae9c6);
+            
+        
+
+        circle_marker_1b6f6770bc3fcf69b0160d3058756bf9.bindPopup(popup_760d1cfb9d575c03a99e4a838d6d35f5)
+        ;
+
+        
+    
+    
+            circle_marker_1b6f6770bc3fcf69b0160d3058756bf9.bindTooltip(
+                `<div>
+                     SP: 4.5% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_edda3680a599ac9803da9abe80371e33 = L.circleMarker(
+                [-24.89, -51.55],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.2, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_6ad2b3b5a7b4123d6c8b637c2616c23b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_299be9d630e6f4c32e37ac46a3d6f42a = $(`<div id="html_299be9d630e6f4c32e37ac46a3d6f42a" style="width: 100.0%; height: 100.0%;"><b>PR</b><br>Late Rate: 4.0%<br>Avg Delay: -13.3 days<br>Avg Review: 4.24 ⭐<br>Orders: 4,923</div>`)[0];
+                popup_6ad2b3b5a7b4123d6c8b637c2616c23b.setContent(html_299be9d630e6f4c32e37ac46a3d6f42a);
+            
+        
+
+        circle_marker_edda3680a599ac9803da9abe80371e33.bindPopup(popup_6ad2b3b5a7b4123d6c8b637c2616c23b)
+        ;
+
+        
+    
+    
+            circle_marker_edda3680a599ac9803da9abe80371e33.bindTooltip(
+                `<div>
+                     PR: 4.0% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0873e4ba3fa0576a7749d25a0c3e8c42 = L.circleMarker(
+                [-9.02, -70.81],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.04, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_57a504847e83f15eb925cb2180d87e58 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_07b83e849d446ffe780a7eaf11267e62 = $(`<div id="html_07b83e849d446ffe780a7eaf11267e62" style="width: 100.0%; height: 100.0%;"><b>AC</b><br>Late Rate: 3.8%<br>Avg Delay: -20.7 days<br>Avg Review: 4.09 ⭐<br>Orders: 80</div>`)[0];
+                popup_57a504847e83f15eb925cb2180d87e58.setContent(html_07b83e849d446ffe780a7eaf11267e62);
+            
+        
+
+        circle_marker_0873e4ba3fa0576a7749d25a0c3e8c42.bindPopup(popup_57a504847e83f15eb925cb2180d87e58)
+        ;
+
+        
+    
+    
+            circle_marker_0873e4ba3fa0576a7749d25a0c3e8c42.bindTooltip(
+                `<div>
+                     AC: 3.8% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8b8eb646604cb78ca2a3aca73875725f = L.circleMarker(
+                [1.41, -51.77],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.4, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_8ffb025b4fc439330fe1337c63be761b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_29327b773faaab0666608c7aa4abca8b = $(`<div id="html_29327b773faaab0666608c7aa4abca8b" style="width: 100.0%; height: 100.0%;"><b>AP</b><br>Late Rate: 3.0%<br>Avg Delay: -19.7 days<br>Avg Review: 4.24 ⭐<br>Orders: 67</div>`)[0];
+                popup_8ffb025b4fc439330fe1337c63be761b.setContent(html_29327b773faaab0666608c7aa4abca8b);
+            
+        
+
+        circle_marker_8b8eb646604cb78ca2a3aca73875725f.bindPopup(popup_8ffb025b4fc439330fe1337c63be761b)
+        ;
+
+        
+    
+    
+            circle_marker_8b8eb646604cb78ca2a3aca73875725f.bindTooltip(
+                `<div>
+                     AP: 3.0% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6360f05c0bd9ff9e838ec0878db073c0 = L.circleMarker(
+                [-10.83, -63.34],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.32, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_3e886d2fe6848bbd5a785b2d78dfc488 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b96fe3b9435fd2e534ed5b18cb1ca20b = $(`<div id="html_b96fe3b9435fd2e534ed5b18cb1ca20b" style="width: 100.0%; height: 100.0%;"><b>RO</b><br>Late Rate: 2.9%<br>Avg Delay: -20.1 days<br>Avg Review: 4.17 ⭐<br>Orders: 243</div>`)[0];
+                popup_3e886d2fe6848bbd5a785b2d78dfc488.setContent(html_b96fe3b9435fd2e534ed5b18cb1ca20b);
+            
+        
+
+        circle_marker_6360f05c0bd9ff9e838ec0878db073c0.bindPopup(popup_3e886d2fe6848bbd5a785b2d78dfc488)
+        ;
+
+        
+    
+    
+            circle_marker_6360f05c0bd9ff9e838ec0878db073c0.bindTooltip(
+                `<div>
+                     RO: 2.9% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_98fd14a81c75f32aa76b49576ae37c0a = L.circleMarker(
+                [-3.07, -61.66],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.24, "stroke": true, "weight": 3}
+            ).addTo(map_b7786e5cac222d347c0ea59945502980);
+        
+    
+        var popup_32aa48ba35dc69857e4c2102bb3ebb1e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6a78907c6e02183b0f9bae78710c7aab = $(`<div id="html_6a78907c6e02183b0f9bae78710c7aab" style="width: 100.0%; height: 100.0%;"><b>AM</b><br>Late Rate: 2.8%<br>Avg Delay: -19.6 days<br>Avg Review: 4.24 ⭐<br>Orders: 145</div>`)[0];
+                popup_32aa48ba35dc69857e4c2102bb3ebb1e.setContent(html_6a78907c6e02183b0f9bae78710c7aab);
+            
+        
+
+        circle_marker_98fd14a81c75f32aa76b49576ae37c0a.bindPopup(popup_32aa48ba35dc69857e4c2102bb3ebb1e)
+        ;
+
+        
+    
+    
+            circle_marker_98fd14a81c75f32aa76b49576ae37c0a.bindTooltip(
+                `<div>
+                     AM: 2.8% late
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
