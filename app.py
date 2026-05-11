@@ -37,9 +37,9 @@ LAYOUT = dict(
     font=dict(family='DM Sans', color='#9ca3af', size=12),
     margin=dict(l=10, r=10, t=40, b=10),
     legend=dict(bgcolor='rgba(0,0,0,0)', font=dict(color='#9ca3af')),
-    xaxis=dict(gridcolor='#1e2433', linecolor='#2a2f3e', tickfont=dict(color='#6b7280')),
-    yaxis=dict(gridcolor='#1e2433', linecolor='#2a2f3e', tickfont=dict(color='#6b7280')),
 )
+# Default axis style - applied per chart to avoid duplicate keyword errors
+_AX = dict(gridcolor='#1e2433', linecolor='#2a2f3e', tickfont=dict(color='#6b7280'))
 STATUS_COLORS = {'On Time': '#2ecc71', 'Late': '#f39c12', 'Super Late': '#e74c3c'}
 ORDER_CATS = ['On Time', 'Late', 'Super Late']
 
@@ -211,7 +211,8 @@ def show_dashboard(df):
         fig2.add_vline(x=5, line_color='#e74c3c', line_dash='dash',
                        annotation_text="Super Late threshold", annotation_font_color='#e74c3c')
         fig2.update_layout(**LAYOUT, height=300,
-                            xaxis_title="Days (Actual - Estimated)", yaxis_title="Number of Orders")
+                            xaxis=dict(**_AX, title="Days (Actual - Estimated)"),
+                            yaxis=dict(**_AX, title="Number of Orders"))
         st.plotly_chart(fig2, use_container_width=True)
 
     st.markdown('<div class="insight-box">📌 <strong>93.2% of orders arrive on time.</strong> However the 6.8% that are late trigger a <strong>47% drop in review score</strong> — from 4.29 to 2.27 stars. Lateness, not volume, is the core problem.</div>', unsafe_allow_html=True)
@@ -236,7 +237,8 @@ def show_dashboard(df):
         fig3.add_hline(y=geo['pct_late'].mean(), line_color='#9ca3af', line_dash='dot',
                        annotation_text=f"Avg {geo['pct_late'].mean():.1f}%", annotation_font_color='#9ca3af')
         fig3.update_layout(**LAYOUT, height=320, coloraxis_showscale=False,
-                            xaxis_title="State", yaxis_title="% Late Orders")
+                            xaxis=dict(**_AX, title="State"),
+                            yaxis=dict(**_AX, title="% Late Orders"))
         st.plotly_chart(fig3, use_container_width=True)
     with cg2:
         st.markdown("**Top 8 Worst States**")
@@ -270,10 +272,10 @@ def show_dashboard(df):
                       color_discrete_map=STATUS_COLORS, text='avg_score')
         fig4.update_traces(texttemplate='%{text:.2f} star', textposition='outside',
                             textfont=dict(color='#f0f0f0'))
-        LAYOUT4 = {k: v for k, v in LAYOUT.items() if k != 'yaxis'}
-        fig4.update_layout(**LAYOUT4, height=320, showlegend=False,
-                            yaxis=dict(range=[1,5.5], gridcolor='#1e2433', linecolor='#2a2f3e', tickfont=dict(color='#6b7280')),
-                            xaxis_title="", yaxis_title="Avg Review Score (1-5)")
+        fig4.update_layout(**LAYOUT, height=320, showlegend=False,
+                            xaxis=dict(**_AX),
+                            yaxis=dict(**_AX, range=[1,5.5]),
+                            yaxis_title="Avg Review Score (1-5)")
         st.plotly_chart(fig4, use_container_width=True)
     with cs2:
         fig5 = go.Figure()
@@ -282,9 +284,9 @@ def show_dashboard(df):
                                    marker=dict(size=5, color='#3b82f6')))
         fig5.add_vline(x=0, line_color='#2ecc71', line_dash='dash')
         fig5.add_vline(x=5, line_color='#e74c3c', line_dash='dash')
-        LAYOUT5 = {k: v for k, v in LAYOUT.items() if k != 'yaxis'}
-        fig5.update_layout(**LAYOUT5, height=320, xaxis_title="Days Late", yaxis_title="Avg Review Score",
-                            yaxis=dict(range=[1,5.5], gridcolor='#1e2433', linecolor='#2a2f3e', tickfont=dict(color='#6b7280')))
+        fig5.update_layout(**LAYOUT, height=320,
+                            xaxis=dict(**_AX, title="Days Late"),
+                            yaxis=dict(**_AX, range=[1,5.5], title="Avg Review Score"))
         st.plotly_chart(fig5, use_container_width=True)
     st.divider()
 
@@ -309,8 +311,8 @@ def show_dashboard(df):
                       custom_data=['total','avg_review'])
         fig6.update_traces(hovertemplate="<b>%{y}</b><br>Late: %{x:.1f}%<br>Orders: %{customdata[0]:,}<br>Avg Review: %{customdata[1]:.2f} star<extra></extra>")
         fig6.update_layout(**LAYOUT, height=380, coloraxis_showscale=False,
-                            yaxis=dict(autorange='reversed', gridcolor='#1e2433', linecolor='#2a2f3e', tickfont=dict(color='#9ca3af')),
-                            xaxis_title="% Late Orders", yaxis_title="")
+                            xaxis=dict(**_AX, title="% Late Orders"),
+                            yaxis=dict(**_AX, autorange="reversed", tickfont=dict(color="#9ca3af")))
         st.plotly_chart(fig6, use_container_width=True)
     with cc2:
         st.markdown("**Revenue at Risk**")
@@ -318,8 +320,9 @@ def show_dashboard(df):
                       color_discrete_map=STATUS_COLORS, text='revenue')
         fig7.update_traces(texttemplate='R$%{text:,.0f}', textposition='outside',
                             textfont=dict(color='#9ca3af', size=10))
-        fig7.update_layout(**LAYOUT, height=300, showlegend=False, xaxis_title="", yaxis_title="Total Revenue (R$)",
-                            yaxis=dict(gridcolor='#1e2433', linecolor='#2a2f3e', tickfont=dict(color='#6b7280')))
+        fig7.update_layout(**LAYOUT, height=300, showlegend=False,
+                            xaxis=dict(**_AX),
+                            yaxis=dict(**_AX, title="Total Revenue (R$)"))
         st.plotly_chart(fig7, use_container_width=True)
         at_risk_val = filt[filt['delivery_status']!='On Time']['order_value'].sum()
         st.markdown(f'<div class="insight-box">💰 <strong>R$ {at_risk_val:,.0f}</strong> in revenue is tied to late deliveries — at direct risk of refunds and lost repeat purchases.</div>', unsafe_allow_html=True)
@@ -338,8 +341,9 @@ def show_dashboard(df):
                                fill='tozeroy', fillcolor='rgba(59,130,246,0.08)',
                                line=dict(color='#3b82f6', width=2.5),
                                mode='lines+markers', marker=dict(size=6, color='#3b82f6')))
-    fig8.update_layout(**LAYOUT, height=260, xaxis_title="Month", yaxis_title="% Late Orders",
-                        xaxis=dict(tickangle=-30, gridcolor='#1e2433', linecolor='#2a2f3e', tickfont=dict(color='#6b7280')))
+    fig8.update_layout(**LAYOUT, height=260,
+                        xaxis=dict(**_AX, tickangle=-30, title="Month"),
+                        yaxis=dict(**_AX, title="% Late Orders"))
     st.plotly_chart(fig8, use_container_width=True)
 
     st.divider()
