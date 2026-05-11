@@ -270,7 +270,8 @@ def show_dashboard(df):
                       color_discrete_map=STATUS_COLORS, text='avg_score')
         fig4.update_traces(texttemplate='%{text:.2f} star', textposition='outside',
                             textfont=dict(color='#f0f0f0'))
-        fig4.update_layout(**LAYOUT, height=320, showlegend=False,
+        LAYOUT4 = {k: v for k, v in LAYOUT.items() if k != 'yaxis'}
+        fig4.update_layout(**LAYOUT4, height=320, showlegend=False,
                             yaxis=dict(range=[1,5.5], gridcolor='#1e2433', linecolor='#2a2f3e', tickfont=dict(color='#6b7280')),
                             xaxis_title="", yaxis_title="Avg Review Score (1-5)")
         st.plotly_chart(fig4, use_container_width=True)
@@ -281,7 +282,8 @@ def show_dashboard(df):
                                    marker=dict(size=5, color='#3b82f6')))
         fig5.add_vline(x=0, line_color='#2ecc71', line_dash='dash')
         fig5.add_vline(x=5, line_color='#e74c3c', line_dash='dash')
-        fig5.update_layout(**LAYOUT, height=320, xaxis_title="Days Late", yaxis_title="Avg Review Score",
+        LAYOUT5 = {k: v for k, v in LAYOUT.items() if k != 'yaxis'}
+        fig5.update_layout(**LAYOUT5, height=320, xaxis_title="Days Late", yaxis_title="Avg Review Score",
                             yaxis=dict(range=[1,5.5], gridcolor='#1e2433', linecolor='#2a2f3e', tickfont=dict(color='#6b7280')))
         st.plotly_chart(fig5, use_container_width=True)
     st.divider()
