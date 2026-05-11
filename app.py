@@ -312,7 +312,7 @@ def show_dashboard(df):
         fig6.update_traces(hovertemplate="<b>%{y}</b><br>Late: %{x:.1f}%<br>Orders: %{customdata[0]:,}<br>Avg Review: %{customdata[1]:.2f} star<extra></extra>")
         fig6.update_layout(**LAYOUT, height=380, coloraxis_showscale=False,
                             xaxis=dict(**_AX, title="% Late Orders"),
-                            yaxis=dict(**_AX, autorange="reversed", tickfont=dict(color="#9ca3af")))
+                            yaxis=dict(**_AX, autorange="reversed"))
         st.plotly_chart(fig6, use_container_width=True)
     with cc2:
         st.markdown("**Revenue at Risk**")
