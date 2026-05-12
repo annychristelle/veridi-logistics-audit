@@ -18,7 +18,7 @@ Analysis of **96,470 delivered orders** from the Olist Brazilian e-commerce plat
 | Notebook (Google Colab) | https://colab.research.google.com/drive/12_q-9lkmRBPh0GOeqSJIzjZO5g8Kd3W9#scrollTo=fPVDYpmpFXWd |
 | Dashboard (Streamlit) | https://veridi-logistics-audit-6acrnmx6nggheseydzy9h7.streamlit.app/ |
 | Presentation (Canva Slides) | https://canva.link/ijhld6d1io6w1zn |
-| Video Walkthrough (YouTube) | _[paste your YouTube link here — optional]_ |
+| Video Walkthrough (YouTube) | https://youtu.be/QAj2qv-lpBA |
 
 ---
 
