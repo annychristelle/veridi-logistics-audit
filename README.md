@@ -7,7 +7,7 @@
 
 ## A. Executive Summary
 
-Analysis of **96,470 delivered orders** from the Olist Brazilian e-commerce platform reveals that **6.8% of deliveries arrive late**, with Super Late orders (>5 days) generating an average review score of just **2.27/5** compared to **4.29/5** for on-time deliveries — a 47% collapse in customer satisfaction directly caused by logistics failure. The problem is **not nationwide**: northern and northeastern states (AL, AM, RR, AP) suffer 3–5× higher late rates than São Paulo, pointing to last-mile infrastructure gaps far from the main distribution hub. A custom **"Revenue at Risk"** analysis estimates **R$ 1,150,866** in direct financial exposure from late orders, giving leadership a concrete business case — not just an NPS argument — for logistics investment.
+Analysis of **96,470 delivered orders** from the Olist Brazilian e-commerce platform reveals that **6.8% of deliveries arrive late**, with Super Late orders (>5 days) generating an average review score of just **2.27/5** compared to **4.29/5** for on-time deliveries; a 47% collapse in customer satisfaction directly caused by logistics failure. The problem is **not nationwide**: northern and northeastern states (AL, AM, RR, AP) suffer 3-5× higher late rates than São Paulo, pointing to last-mile infrastructure gaps far from the main distribution hub. A custom **"Revenue at Risk"** analysis estimates **R$ 1,150,866** in direct financial exposure from late orders, giving leadership a concrete business case, not just an NPS argument, for logistics investment.
 
 ---
 
@@ -15,10 +15,10 @@ Analysis of **96,470 delivered orders** from the Olist Brazilian e-commerce plat
 
 | Deliverable | Link |
 |---|---|
-| 📓 Notebook (Google Colab) | https://colab.research.google.com/drive/12_q-9lkmRBPh0GOeqSJIzjZO5g8Kd3W9#scrollTo=fPVDYpmpFXWd |
-| 📊 Dashboard (Streamlit) | https://veridi-logistics-audit-6acrnmx6nggheseydzy9h7.streamlit.app/ |
-| 📽️ Presentation (Google Slides) | _[paste your Slides link here]_ |
-| 🎥 Video Walkthrough (YouTube) | _[paste your YouTube link here — optional]_ |
+| Notebook (Google Colab) | https://colab.research.google.com/drive/12_q-9lkmRBPh0GOeqSJIzjZO5g8Kd3W9#scrollTo=fPVDYpmpFXWd |
+| Dashboard (Streamlit) | https://veridi-logistics-audit-6acrnmx6nggheseydzy9h7.streamlit.app/ |
+| Presentation (Google Slides) | _[paste your Slides link here]_ |
+| Video Walkthrough (YouTube) | _[paste your YouTube link here — optional]_ |
 
 ---
 
@@ -42,12 +42,12 @@ Analysis of **96,470 delivered orders** from the Olist Brazilian e-commerce plat
 
 | Story | Description | Status |
 |---|---|---|
-| Story 1 | Schema Builder — joined Orders, Reviews, Customers, Products | ✅ |
-| Story 2 | Delay Calculator — `days_difference`, On Time / Late / Super Late | ✅ |
-| Story 3 | Geographic Heatmap — late % by Brazilian state | ✅ |
-| Story 4 | Sentiment Correlation — delay vs. review score | ✅ |
-| Bonus | Product category translation (Portuguese → English) | ✅ |
-| Candidate's Choice | Revenue at Risk analysis | ✅ |
+| Story 1 | Schema Builder — joined Orders, Reviews, Customers, Products | Done |
+| Story 2 | Delay Calculator — `days_difference`, On Time / Late / Super Late | Done |
+| Story 3 | Geographic Heatmap — late % by Brazilian state | Done |
+| Story 4 | Sentiment Correlation — delay vs. review score | Done |
+| Bonus | Product category translation (Portuguese → English) | Done |
+| Candidate's Choice | Revenue at Risk analysis | Done |
 
 ---
 
@@ -66,7 +66,7 @@ streamlit run app.py
 Upload the 7 CSV files when prompted. No local paths needed.
 
 ### Option 3 — Streamlit Cloud (Live Dashboard)
-Visit the dashboard link above — no login required.
+Visit the dashboard link above - no login required.
 
 ---
 
