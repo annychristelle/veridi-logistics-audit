@@ -31,7 +31,7 @@ Analysis of **96,470 delivered orders** from the Olist Brazilian e-commerce plat
 - **Join integrity:** All table joins used LEFT joins anchored on the `orders` table. A row-count assertion (`assert len(master) == len(orders)`) confirms zero row duplication from 1-to-many join errors.
 - **Relative paths:** All CSV files are loaded using relative paths (e.g. `pd.read_csv('olist_orders_dataset.csv')`), ensuring full reproducibility on any machine.
 
-### Candidate's Choice — "Revenue at Risk" Analysis
+### Candidate's Choice: "Revenue at Risk" Analysis
 **What it is:** A financial exposure metric that joins the `olist_order_payments_dataset.csv` to attach a real R$ value to every late delivery, then aggregates total GMV by delivery status.
 
 **Why it matters to the business:** Late delivery metrics alone (percentages, review scores) are useful for operations but difficult to escalate to the CFO or board. By expressing the problem as **R$ 1,150,866 in revenue at risk**, this feature bridges the gap between logistics data and financial decision-making. Orders tied to late deliveries are at elevated risk of refund claims, chargebacks, and — most expensively — lost repeat purchases. This single number gives the CEO a concrete ROI argument for any proposed logistics infrastructure investment.
