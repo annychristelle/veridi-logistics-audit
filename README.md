@@ -1,4 +1,4 @@
-# 🚚 Veridi Logistics — Last Mile Delivery Performance Audit
+# Veridi Logistics : Last Mile Delivery Performance Audit
 
 > **Data Engineering Program Submission**
 > Dataset: Olist Brazilian E-Commerce (Kaggle) | Tool: Python, Streamlit, Plotly
