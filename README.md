@@ -42,10 +42,10 @@ Analysis of 96,470 delivered orders from the Olist Brazilian e-commerce platform
 
 | Story | Description | Status |
 |---|---|---|
-| Story 1 | Schema Builder — joined Orders, Reviews, Customers, Products | Done |
-| Story 2 | Delay Calculator — `days_difference`, On Time / Late / Super Late | Done |
-| Story 3 | Geographic Heatmap — late % by Brazilian state | Done |
-| Story 4 | Sentiment Correlation — delay vs. review score | Done |
+| Story 1 | Schema Builder: joined Orders, Reviews, Customers, Products | Done |
+| Story 2 | Delay Calculator: `days_difference`, On Time / Late / Super Late | Done |
+| Story 3 | Geographic Heatmap: late % by Brazilian state | Done |
+| Story 4 | Sentiment Correlation: delay vs. review score | Done |
 | Bonus | Product category translation (Portuguese → English) | Done |
 | Candidate's Choice | Revenue at Risk analysis | Done |
 
