@@ -53,19 +53,19 @@ Analysis of 96,470 delivered orders from the Olist Brazilian e-commerce platform
 
 ## E. How to Run
 
-### Option 1 — Google Colab (Notebook)
+### Option 1: Google Colab (Notebook)
 1. Open the Colab link above
 2. Upload the 7 Olist CSV files to the session storage
 3. Runtime → Run all
 
-### Option 2 — Streamlit Dashboard (Local)
+### Option 2: Streamlit Dashboard (Local)
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
 Upload the 7 CSV files when prompted. No local paths needed.
 
-### Option 3 — Streamlit Cloud (Live Dashboard)
+### Option 3: Streamlit Cloud (Live Dashboard)
 Visit the dashboard link above - no login required.
 
 ---
