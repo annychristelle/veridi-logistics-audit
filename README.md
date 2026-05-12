@@ -74,8 +74,8 @@ Visit the dashboard link above - no login required.
 
 ```
 veridi-logistics-audit/
-├── veridi_logistics_audit.ipynb   ← Main analysis notebook
-├── veridi_logistics_audit.html    ← Exported notebook (viewable without Colab)
+├── veridi_logistics_audit(1).ipynb   ← Main analysis notebook
+├── veridi_logistics_audit(1).ipynb - Colab,pdf    ← Exported notebook (viewable without Colab)
 ├── app.py                         ← Streamlit dashboard
 ├── requirements.txt               ← Python dependencies
 ├── README.md                      ← This file
