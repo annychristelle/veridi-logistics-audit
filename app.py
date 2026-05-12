@@ -215,7 +215,7 @@ def show_dashboard(df):
                             yaxis=dict(**_AX, title="Number of Orders"))
         st.plotly_chart(fig2, use_container_width=True)
 
-    st.markdown('<div class="insight-box">📌 <strong>93.2% of orders arrive on time.</strong> However the 6.8% that are late trigger a <strong>47% drop in review score</strong> — from 4.29 to 2.27 stars. Lateness, not volume, is the core problem.</div>', unsafe_allow_html=True)
+    st.markdown('<div class="insight-box">📌 <strong>93.2% of orders arrive on time.</strong> However the 6.8% that are late trigger a <strong>47% drop in review score</strong> from 4.29 to 2.27 stars. Lateness, not volume, is the core problem.</div>', unsafe_allow_html=True)
     st.divider()
 
     st.markdown("#### Late Delivery Rate by State")
@@ -249,10 +249,10 @@ def show_dashboard(df):
         worst['Avg Review']= worst['Avg Review'].apply(lambda x: f"{x:.2f} star")
         st.dataframe(worst, hide_index=True, use_container_width=True, height=285)
 
-    st.markdown('<div class="insight-box">🗺️ <strong>This is a regional problem, not nationwide.</strong> Northern and northeastern states (AL, AM, RR, AP) have <strong>3-5x higher late rates</strong> than Sao Paulo — pointing to last-mile infrastructure gaps far from the distribution hub.</div>', unsafe_allow_html=True)
+    st.markdown('<div class="insight-box">🗺️ <strong>This is a regional problem, not nationwide.</strong> Northern and northeastern states (AL, AM, RR, AP) have <strong>3-5x higher late rates</strong> than Sao Paulo pointing to last-mile infrastructure gaps far from the distribution hub.</div>', unsafe_allow_html=True)
     st.divider()
 
-    st.markdown("#### Sentiment Correlation — Does Late = Bad Reviews?")
+    st.markdown("#### Sentiment Correlation: Does Late = Bad Reviews?")
     sent = (filt.dropna(subset=['review_score']).groupby('delivery_status')['review_score']
             .mean().reset_index())
     sent.columns = ['status','avg_score']
@@ -325,10 +325,10 @@ def show_dashboard(df):
                             yaxis=dict(**_AX, title="Total Revenue (R$)"))
         st.plotly_chart(fig7, use_container_width=True)
         at_risk_val = filt[filt['delivery_status']!='On Time']['order_value'].sum()
-        st.markdown(f'<div class="insight-box">💰 <strong>R$ {at_risk_val:,.0f}</strong> in revenue is tied to late deliveries — at direct risk of refunds and lost repeat purchases.</div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="insight-box">💰 <strong>R$ {at_risk_val:,.0f}</strong> in revenue is tied to late deliveries at direct risk of refunds and lost repeat purchases.</div>', unsafe_allow_html=True)
     st.divider()
 
-    st.markdown("#### Candidate's Choice — Late Rate Trend Over Time")
+    st.markdown("#### Candidate's Choice: Late Rate Trend Over Time")
     st.markdown("<p style='color:#6b7280;font-size:13px;margin-top:-8px'>Reveals whether the problem is worsening, seasonal, or improving.</p>", unsafe_allow_html=True)
     monthly = (filt.groupby('order_month')
         .agg(total=('order_id','count'), late=('delivery_status', lambda x:(x!='On Time').sum()))
