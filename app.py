@@ -8,7 +8,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 st.set_page_config(
-    page_title="Veridi Logistics — Delivery Audit",
+    page_title="Veridi Logistics Delivery Audit",
     page_icon="🚚",
     layout="wide",
     initial_sidebar_state="expanded"
